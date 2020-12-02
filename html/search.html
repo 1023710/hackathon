@@ -1,0 +1,67 @@
+<html>
+<style type="text/css">
+{
+    font-size: 18pt;
+}
+
+#search{
+    width: 200%; 
+    height: 50%;
+    margin:auto;
+    padding-inline: 20;
+    display: light; 
+    text-align: center; 
+    font-size: 18pt;
+
+
+}
+div {
+    height: 200px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+#searchin{
+    float: left;
+    width: 50%; 
+    height: 50px;
+    font-size:20px;
+    border-radius: 10px;
+
+}
+
+#btngo{
+    float: left;
+    width: 8%; 
+    height: 50px;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+
+</style>
+<head>
+</head>
+<body style="background-color:white">
+
+<div>
+<form  id="search" action = "{{ url_for('resultset') }}" method = "POST">
+
+<input type = "text" id="searchin" placeholder="Try a single keyword search from sql..." name=query /> 
+<input type = "submit" id="btngo"  value="Go" class="btn btn-primary" /> 
+
+</form>
+      </div>
+
+</body>
+</html>
+
+
